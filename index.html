@@ -1,0 +1,862 @@
+<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SISONKE EDUTECH — Together for a Smarter, Brighter Future</title>
+  <meta name="description" content="Integrated Education, Business, and Technology Solutions Provider. Tutoring, TVET & University Applications, CV Writing, Printing, Media, IT Support, and Digital Skills.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="SISONKE EDUTECH — Education, Business, Technology Solutions">
+  <meta property="og:description" content="Together for a Smarter, Brighter Future. Learn • Grow • Innovate • Excel.">
+  <meta property="og:type" content="website">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: {
+              navy: '#0B132B',
+              dark: '#1C2541',
+              blue: '#2563EB',
+              royal: '#1D4ED8',
+              red: '#EF4444',
+              yellow: '#F59E0B',
+              green: '#10B981',
+              light: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glassmorphism Design System */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    }
+    .glass-panel-dark {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.85);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .glass-input {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(203, 213, 225, 0.6);
+      transition: all 0.2s ease;
+    }
+    .glass-input:focus {
+      background: rgba(255, 255, 255, 0.98);
+      border-color: #2563EB;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+      outline: none;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #1D4ED8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white relative overflow-x-hidden">
+
+  <!-- Ambient Glow Background Decoration -->
+  <div class="ambient-glow w-96 h-96 bg-blue-400/20 top-0 left-1/4"></div>
+  <div class="ambient-glow w-96 h-96 bg-emerald-400/15 top-1/3 right-10"></div>
+  <div class="ambient-glow w-80 h-80 bg-amber-400/15 bottom-1/4 left-10"></div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Wordmark -->
+      <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg p-1">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-navy via-brand-blue to-emerald-500 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+          S
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-xl tracking-tight text-brand-navy leading-none">SISONKE</span>
+          <span class="text-xs font-bold tracking-widest text-brand-blue leading-tight mt-0.5">EDUTECH</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#home" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">Home</a>
+        <a href="#about" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">About</a>
+        <a href="#services" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">Services</a>
+        <a href="#education" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">Education</a>
+        <a href="#why-us" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">Why Us</a>
+        <a href="#contact" class="hover:text-brand-blue transition-colors focus:outline-none focus:text-brand-blue">Contact</a>
+      </nav>
+
+      <!-- Action Button (Desktop) -->
+      <div class="hidden md:flex items-center gap-3">
+        <a id="nav-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm shadow-md shadow-emerald-500/20 hover:shadow-lg transition-all flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4">="</i>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-200/80 px-4 pt-4 pb-6 space-y-3">
+      <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">About</a>
+      <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Services</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Education</a>
+      <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Why Us</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-brand-blue">Contact</a>
+      <div class="pt-2">
+        <a id="mobile-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2 shadow-md">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-brand-blue text-xs sm:text-sm font-bold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Integrated Solutions Provider
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Together for a <span class="gradient-text">Smarter, Brighter</span> Future.
+          </h1>
+          
+          <p class="text-lg sm:text-xl font-medium text-slate-600 max-w-2xl mx-auto lg:mx-0">
+            SISONKE EDUTECH empowers individuals, learners, and business enterprises with specialized tutoring, academic guidance, career support, media creation, and modern IT services.
+          </p>
+
+          <!-- Tagline Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md bg-white/80 border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Education</span>
+            <span class="text-slate-300">•</span>
+            <span class="px-3 py-1 rounded-md bg-white/80 border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Business</span>
+            <span class="text-slate-300">•</span>
+            <span class="px-3 py-1 rounded-md bg-white/80 border border-slate-200 text-xs font-semibold text-slate-700 shadow-sm">Technology</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-blue hover:bg-brand-royal text-white font-bold shadow-lg shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 text-center">
+              Explore Services
+            </a>
+            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-white text-slate-800 font-bold transition-all text-center">
+              Contact Us
+            </a>
+            <a id="hero-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 hover:bg-emerald-100 font-bold transition-all flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Graphic (Abstract CSS Education & Tech Illustration) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Background Decorative Glow -->
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-500 to-emerald-500 opacity-30 blur-2xl"></div>
+            
+            <!-- Glass Visual Container -->
+            <div class="relative glass-panel rounded-3xl p-8 border border-white/60 shadow-2xl space-y-6">
+              
+              <!-- Floating Visual Badges -->
+              <div class="flex items-center justify-between pb-6 border-b border-slate-200/60">
+                <div class="flex items-center gap-3">
+                  <div class="p-3 rounded-2xl bg-blue-100 text-brand-blue">
+                    <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Academic Excellence</h3>
+                    <p class="text-xs text-slate-500">Grades 4–12 & Tertiary</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">Active</span>
+              </div>
+
+              <!-- Graphic Cards Grid -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 rounded-2xl bg-white/70 border border-white/80 shadow-sm flex flex-col items-start space-y-2">
+                  <div class="p-2 rounded-xl bg-amber-100 text-amber-600">
+                    <i data-lucide="laptop" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-bold text-slate-800 text-sm">Tech Support</span>
+                  <span class="text-xs text-slate-500">Digital Solutions</span>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white/70 border border-white/80 shadow-sm flex flex-col items-start space-y-2">
+                  <div class="p-2 rounded-xl bg-emerald-100 text-emerald-600">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                  </div>
+                  <span class="font-bold text-slate-800 text-sm">Career & CVs</span>
+                  <span class="text-xs text-slate-500">Professional Services</span>
+                </div>
+              </div>
+
+              <!-- Bottom Motto Bar -->
+              <div class="p-4 rounded-2xl bg-gradient-to-r from-brand-navy to-brand-dark text-white text-center shadow-lg">
+                <p class="text-xs uppercase tracking-widest font-bold text-blue-300">Brand Philosophy</p>
+                <p class="text-sm font-semibold mt-1">Learn • Grow • Innovate • Excel</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE COMPANY -->
+  <section id="about" class="py-20 relative bg-white/40 border-y border-slate-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <h2 class="text-xs font-bold text-brand-blue tracking-widest uppercase">About SISONKE EDUTECH</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Empowering Communities Through Learning & Technology</p>
+        <p class="text-slate-600 text-base sm:text-lg">
+          SISONKE EDUTECH operates as a multi-disciplinary hub bridging educational gaps and facilitating modern digital capability for students, job seekers, and business enterprises.
+        </p>
+      </div>
+
+      <!-- Core Mission Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center font-bold">
+            <i data-lucide="book-open" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900">Educate</h3>
+          <p class="text-sm text-slate-600">Delivering subject mastery in Mathematics, Math Literacy, and Physics for Grades 4 through 12.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900">Empower</h3>
+          <p class="text-sm text-slate-600">Assisting applicants with TVET & University admissions alongside high-impact professional CV writing.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900">Innovate</h3>
+          <p class="text-sm text-slate-600">Providing technical IT support, Internet Café connectivity, and digital content media solutions.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900">Impact</h3>
+          <p class="text-sm text-slate-600">Driving sustainable community development through digital literacy and enterprise services.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUR EIGHT SERVICES -->
+  <section id="services" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <h2 class="text-xs font-bold text-brand-blue tracking-widest uppercase">Comprehensive Offerings</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Our Eight Specialized Services</p>
+        <p class="text-slate-600 text-base">Explore our integrated service portfolio tailored for academic success and business efficiency.</p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Service 1 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 text-brand-blue flex items-center justify-center">
+              <i data-lucide="calculator" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">1. Tutoring (Grades 4–12)</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Targeted support in Mathematics, Mathematical Literacy, and Physics designed to improve performance and core understanding.</p>
+          </div>
+          <a href="#" data-service="Tutoring Grades 4-12" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">2. TVET & Varsity Applications</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Seamless application processing, qualification guidance, and document submittal for higher learning institutions.</p>
+          </div>
+          <a href="#" data-service="TVET & University Applications" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">3. CV Writing & Career Support</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Professional curriculum vitae drafting, cover letters, and career guidance tailored for job opportunities.</p>
+          </div>
+          <a href="#" data-service="CV Writing & Career Support" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-200 text-purple-600 flex items-center justify-center">
+              <i data-lucide="printer" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">4. Design & Printing</h3>
+            <p class="text-xs sm:text-sm text-slate-600">High-quality graphic design and printing for promotional posters, flyers, documents, and corporate materials.</p>
+          </div>
+          <a href="#" data-service="Design & Printing" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center">
+              <i data-lucide="wifi" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">5. Internet Café Services</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Reliable high-speed Wi-Fi access, document scanning, copying, and internet workstation access.</p>
+          </div>
+          <a href="#" data-service="Internet Cafe Services" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center">
+              <i data-lucide="image" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">6. Media Solutions</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Digital content creation, graphics design, branding assets, and media consultation for local ventures.</p>
+          </div>
+          <a href="#" data-service="Media Solutions" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">7. IT Support & Tech</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Technical troubleshooting, software installation, system diagnostics, and hardware assistance.</p>
+          </div>
+          <a href="#" data-service="IT Support & Technology Solutions" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 text-teal-600 flex items-center justify-center">
+              <i data-lucide="lightbulb" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">8. Digital Skills & Innovation</h3>
+            <p class="text-xs sm:text-sm text-slate-600">Practical computer training, digital literacy workshops, and modern tech skills development.</p>
+          </div>
+          <a href="#" data-service="Digital Skills & Innovation" class="service-wa-btn inline-flex items-center justify-between w-full pt-3 border-t border-slate-200/60 text-xs font-bold text-emerald-600 hover:text-emerald-700">
+            <span>Enquire on WhatsApp</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION & TUTORING ENQUIRIES -->
+  <section id="education" class="py-20 relative bg-slate-900 text-white overflow-hidden">
+    <div class="ambient-glow w-96 h-96 bg-blue-600/20 -top-20 -left-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Overview -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold tracking-widest uppercase">Academic Program</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Specialized Tutoring (Grades 4–12)</h2>
+          <p class="text-slate-300 text-base">
+            Our structured tutoring modules are formulated to build fundamental competence, confidence, and exam readiness for primary and high school learners.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+              <span class="text-sm font-medium text-slate-200">Mathematics</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+              <span class="text-sm font-medium text-slate-200">Mathematical Literacy</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+              <span class="text-sm font-medium text-slate-200">Physics (Physical Sciences)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel-dark p-6 sm:p-8 rounded-3xl">
+            <h3 class="text-xl font-bold text-white mb-2">Learner Registration & Enquiry</h3>
+            <p class="text-xs text-slate-400 mb-6">Complete this form to initiate a tutoring application directly over WhatsApp.</p>
+
+            <form id="tutoring-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="learner-name" class="block text-xs font-semibold text-slate-300 mb-1">Learner Full Name *</label>
+                  <input type="text" id="learner-name" required class="w-full glass-input px-4 py-3 rounded-xl text-white placeholder-slate-400 text-sm" placeholder="e.g. Sipho Ndlovu">
+                </div>
+
+                <div>
+                  <label for="learner-grade" class="block text-xs font-semibold text-slate-300 mb-1">Grade Level *</label>
+                  <select id="learner-grade" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-800 text-sm">
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="Grade 4">Grade 4</option>
+                    <option value="Grade 5">Grade 5</option>
+                    <option value="Grade 6">Grade 6</option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="learner-subject" class="block text-xs font-semibold text-slate-300 mb-1">Subject Required *</label>
+                  <select id="learner-subject" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-800 text-sm">
+                    <option value="" disabled selected>Select Subject</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Mathematical Literacy">Mathematical Literacy</option>
+                    <option value="Physics">Physics</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="parent-contact" class="block text-xs font-semibold text-slate-300 mb-1">Parent / Guardian Contact *</label>
+                  <input type="tel" id="parent-contact" required class="w-full glass-input px-4 py-3 rounded-xl text-white placeholder-slate-400 text-sm" placeholder="e.g. 0714217169">
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-lg shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Submit Tutoring Enquiry via WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <h2 class="text-xs font-bold text-brand-blue tracking-widest uppercase">The Sisonke Advantage</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Choose SISONKE EDUTECH</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center font-extrabold text-xl">
+            01
+          </div>
+          <h3 class="font-bold text-xl text-slate-900">Educational Development</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Focused curriculum support with tailored learning techniques that boost student performance in core STEM subjects.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-extrabold text-xl">
+            02
+          </div>
+          <h3 class="font-bold text-xl text-slate-900">Accessible Technology</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Providing modern Internet Café, print, and IT diagnostic solutions directly accessible to the local community.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-extrabold text-xl">
+            03
+          </div>
+          <h3 class="font-bold text-xl text-slate-900">Community Empowerment</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Unlocking future career pathways through dedicated university application assistance and professional CV writing.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 relative bg-white/60 border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Details Column -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <h2 class="text-xs font-bold text-brand-blue tracking-widest uppercase mb-2">Get In Touch</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">We Are Ready To Assist You</p>
+            <p class="text-slate-600 text-sm sm:text-base mt-3">
+              Reach out via telephone, email, or instant WhatsApp messaging for fast feedback.
+            </p>
+          </div>
+
+          <!-- Official Contact Details List -->
+          <div class="space-y-4">
+            
+            <a id="contact-link-wa" href="#" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-2xl flex items-center gap-4 hover:border-emerald-300">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-400 uppercase">WhatsApp</p>
+                <p class="text-base font-bold text-slate-800" id="display-wa font-mono">0714217169</p>
+              </div>
+            </a>
+
+            <a id="contact-link-tel" href="#" class="glass-card p-4 rounded-2xl flex items-center gap-4 hover:border-blue-300">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-400 uppercase">Telephone</p>
+                <p class="text-base font-bold text-slate-800" id="display-tel">0714217169</p>
+              </div>
+            </a>
+
+            <a id="contact-link-email" href="#" class="glass-card p-4 rounded-2xl flex items-center gap-4 hover:border-indigo-300">
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-400 uppercase">Email</p>
+                <p class="text-base font-bold text-slate-800" id="display-email">sisonkedutech8@email.com</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- General Enquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white">
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">General Enquiry Form</h3>
+            <p class="text-xs text-slate-500 mb-6">Send your general query straight to our WhatsApp chat.</p>
+
+            <form id="general-contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                  <input type="text" id="contact-name" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-900 text-sm" placeholder="John Doe">
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                  <input type="email" id="contact-email" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-900 text-sm" placeholder="john@example.com">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-phone" class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                  <input type="tel" id="contact-phone" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-900 text-sm" placeholder="0714217169">
+                </div>
+
+                <div>
+                  <label for="contact-subject" class="block text-xs font-semibold text-slate-700 mb-1">Subject / Interest *</label>
+                  <input type="text" id="contact-subject" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-900 text-sm" placeholder="e.g. Graphic Design / IT Support">
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-semibold text-slate-700 mb-1">Message Details *</label>
+                <textarea id="contact-message" rows="4" required class="w-full glass-input px-4 py-3 rounded-xl text-slate-900 text-sm" placeholder="How can we assist you today?"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-royal text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>Send Enquiry via WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a id="floating-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-600/50 hover:bg-emerald-600 hover:scale-110 transition-all flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-emerald-300" aria-label="Chat with SISONKE EDUTECH on WhatsApp">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-emerald-400 flex items-center justify-center text-white font-black text-lg">
+              S
+            </div>
+            <span class="font-extrabold text-xl tracking-tight text-white">SISONKE EDUTECH</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-sm">
+            Education, Business, Technology Solutions. Together for a Smarter, Brighter Future.
+          </p>
+          <p class="text-xs font-semibold text-brand-blue uppercase tracking-wider">
+            Learn • Grow • Innovate • Excel
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-widest">Navigation</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Our Services</a></li>
+            <li><a href="#education" class="hover:text-white transition-colors">Tutoring Program</a></li>
+            <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Contact Summary -->
+        <div class="md:col-span-4 space-y-3">
+          <p class="text-xs font-bold text-white uppercase tracking-widest">Contact Information</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+              <span>Tel: 0714217169</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>WhatsApp: 0714217169</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+              <span>sisonkedutech8@email.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Creator Credit -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© <span id="copyright-year"></span> SISONKE EDUTECH. All rights reserved.</p>
+        <p class="font-medium text-slate-400">Created by Mawethu Mpande | @SISONKEHUB</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CONFIGURATION & CONTROLLER SCRIPT -->
+  <script>
+    // 1. Official Single Source of Truth Configuration
+    const CONFIG = {
+      companyName: 'SISONKE EDUTECH',
+      phone: '0714217169',
+      whatsappNumber: '27714217169',
+      email: 'sisonkedutech8@email.com',
+      waBaseUrl: 'https://wa.me/27714217169'
+    };
+
+    // 2. Initialize Page Links & Dynamic Content
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dynamic Year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+      // Configure Contact Links
+      const defaultWaLink = `${CONFIG.waBaseUrl}?text=${encodeURIComponent('Hello SISONKE EDUTECH, I would like to make an enquiry.')}`;
+      
+      document.getElementById('nav-wa-btn').href = defaultWaLink;
+      document.getElementById('mobile-wa-btn').href = defaultWaLink;
+      document.getElementById('hero-wa-btn').href = defaultWaLink;
+      document.getElementById('floating-wa-btn').href = defaultWaLink;
+      document.getElementById('contact-link-wa').href = defaultWaLink;
+      
+      document.getElementById('contact-link-tel').href = `tel:+27714217169`;
+      document.getElementById('contact-link-email').href = `mailto:${CONFIG.email}`;
+
+      // Initialize Service WhatsApp Links
+      document.querySelectorAll('.service-wa-btn').forEach(btn => {
+        const serviceName = btn.getAttribute('data-service');
+        const text = `Hello SISONKE EDUTECH, I am interested in your ${serviceName} service.`;
+        btn.href = `${CONFIG.waBaseUrl}?text=${encodeURIComponent(text)}`;
+        btn.target = '_blank';
+        btn.rel = 'noopener noreferrer';
+      });
+
+      // Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    // 3. Mobile Navigation Menu Toggle
+    const menuToggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    menuToggleBtn.addEventListener('click', () => {
+      const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+      menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+      menuIconOpen.classList.toggle('hidden');
+      menuIconClose.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+        menuToggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // 4. Tutoring Form Handler (WhatsApp Direct Action)
+    document.getElementById('tutoring-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('learner-name').value.trim();
+      const grade = document.getElementById('learner-grade').value;
+      const subject = document.getElementById('learner-subject').value;
+      const contact = document.getElementById('parent-contact').value.trim();
+
+      if (!name || !grade || !subject || !contact) {
+        alert('Please fill in all required tutoring fields.');
+        return;
+      }
+
+      const msg = `TUTORING ENQUIRY:\n- Learner: ${name}\n- Grade: ${grade}\n- Subject: ${subject}\n- Contact: ${contact}`;
+      window.open(`${CONFIG.waBaseUrl}?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+
+    // 5. General Contact Form Handler (WhatsApp Direct Action)
+    document.getElementById('general-contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const subject = document.getElementById('contact-subject').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+
+      if (!name || !email || !phone || !subject || !message) {
+        alert('Please complete all message fields.');
+        return;
+      }
+
+      const msg = `GENERAL ENQUIRY:\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Subject: ${subject}\n- Message: ${message}`;
+      window.open(`${CONFIG.waBaseUrl}?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+  </script>
+</body>
+</html>
